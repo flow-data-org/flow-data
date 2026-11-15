@@ -1,0 +1,10 @@
+title = "flow-data gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Фиктивные значения в примерах"
+paths = [
+  '''\.env\.example$''',
+]
