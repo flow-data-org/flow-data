@@ -1,0 +1,10 @@
+# Проверка секретов перед каждым коммитом.
+# Установка: brew install pre-commit gitleaks && pre-commit install
+repos:
+  - repo: local
+    hooks:
+      - id: gitleaks
+        name: gitleaks (поиск секретов)
+        entry: gitleaks git --pre-commit --staged --redact --no-banner -v
+        language: system
+        pass_filenames: false
